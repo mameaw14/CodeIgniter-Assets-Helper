@@ -12,4 +12,5 @@ $config = array(
 	'path_js'   = 'js',
 	'path_css'  = 'css',
 	'path_img'  = 'img',
+	'path_font' = 'fonts',
 );
