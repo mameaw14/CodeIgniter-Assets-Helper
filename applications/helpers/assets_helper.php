@@ -131,6 +131,6 @@ if (!function_exists('assets_font'))
 {
   function assets_font($file, $attr = array())
   {
-    return _assets_base($file, $attr, 'font')
+    return _assets_base($file, $attr, 'font');
   }
 }
