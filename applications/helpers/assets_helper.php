@@ -14,6 +14,7 @@ if (!function_exists('_getConfig'))
     $config['path_js']   = $CI->config->item('path_js');
     $config['path_css']  = $CI->config->item('path_css');
     $config['path_img']  = $CI->config->item('path_img');
+    $config['path_font'] = $CI->config->item('path_font');
     
     return $config;
   }
@@ -59,6 +60,8 @@ if (!function_exists('_process_array'))
           $head .= '<link rel="stylesheet" type="text/css" href="' . $path . '"' . $attr . '>';
         else if($type == 'img')
           $head .= '<img src="' . $path . '"'.$attr.'/>';
+        else if($type == 'font')
+          $head .= '<link rel="stylesheet" href="' . $path . '"' . $attr . '>';
       }
 
       return $head;
@@ -94,6 +97,8 @@ if (!function_exists('_assets_base'))
         return '<link rel="stylesheet" type="text/css" href="' . $path . '"' . $attribute . '>';
       else if($type == 'img')
         return '<img src="' . $path . '"'.$attribute.'/>';
+      else if($type == 'font')
+        return '<link rel="stylesheet" href="' . $path . '"' . $attribute . '>';
     }
   }
 }
@@ -119,5 +124,13 @@ if (!function_exists('assets_img'))
   function assets_img($file, $attr = array())
   {
     return _assets_base($file, $attr, 'img');
+  }
+}
+
+if (!function_exists('assets_font'))
+{
+  function assets_font($file, $attr = array())
+  {
+    return _assets_base($file, $attr, 'font')
   }
 }
