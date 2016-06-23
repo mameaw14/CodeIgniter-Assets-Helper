@@ -4,13 +4,13 @@ $config = array(
 	/**
 	 * Base path. URLs will be /path_base/path_<asset type>/<asset_name>
 	 */
-	'path_base' = 'assets',
+	'path_base' => 'assets',
 	
 	/**
 	 * Read above. Path for asset types.
 	 */
-	'path_js'   = 'js',
-	'path_css'  = 'css',
-	'path_img'  = 'img',
-	'path_font' = 'fonts',
+	'path_js'   => 'js',
+	'path_css'  => 'css',
+	'path_img'  => 'img',
+	'path_font' => 'fonts',
 );
